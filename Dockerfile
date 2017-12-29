@@ -8,9 +8,9 @@ RUN mkdir /etc/supervisor.d/
 
 RUN mkdir -p /run/opendkim && chown opendkim /run/opendkim
 
-ADD /etc/supervisor.d/opendkim.ini supervisor.d/opendkim.ini
-ADD /etc/supervisor.d/postgrey.ini supervisor.d/postgrey.ini
-ADD /etc/supervisor.d/postfix.ini supervisor.d/postfix.ini
+ADD supervisor.d/opendkim.ini /etc/supervisor.d/opendkim.ini 
+ADD supervisor.d/postgrey.ini /etc/supervisor.d/postgrey.ini 
+ADD supervisor.d/postfix.ini /etc/supervisor.d/postfix.ini 
 
 VOLUME /var/db/dkim
 VOLUME /etc/postfix
