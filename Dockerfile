@@ -14,5 +14,7 @@ ADD /etc/supervisor.d/postfix.ini supervisor.d/postfix.ini
 
 VOLUME /var/db/dkim
 VOLUME /etc/postfix
+VOLUME /etc/opendkim
 
 EXPOSE 25
+EXPOSE 587
