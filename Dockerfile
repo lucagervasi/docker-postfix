@@ -11,10 +11,10 @@ RUN mkdir -p /run/opendkim && chown opendkim /run/opendkim
 ADD supervisor.d/opendkim.ini /etc/supervisor.d/opendkim.ini 
 ADD supervisor.d/postgrey.ini /etc/supervisor.d/postgrey.ini 
 ADD supervisor.d/postfix.ini /etc/supervisor.d/postfix.ini 
+ADD supervisor.d/syslogd.ini /etc/supervisor.d/syslogd.ini 
 
-VOLUME /var/db/dkim
 VOLUME /etc/postfix
-VOLUME /etc/opendkim
+VOLUME /run/opendkim
 
 EXPOSE 25
 EXPOSE 587
