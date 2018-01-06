@@ -20,3 +20,5 @@ VOLUME /run/opendkim
 
 EXPOSE 25
 EXPOSE 587
+
+CMD ["/usr/bin/supervisord"]
