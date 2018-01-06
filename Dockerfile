@@ -13,6 +13,8 @@ ADD supervisor.d/postgrey.ini /etc/supervisor.d/postgrey.ini
 ADD supervisor.d/postfix.ini /etc/supervisor.d/postfix.ini
 ADD supervisor.d/syslogd.ini /etc/supervisor.d/syslogd.ini
 
+ADD syslog.conf /etc/syslog.conf
+
 VOLUME /etc/postfix
 VOLUME /run/opendkim
 
