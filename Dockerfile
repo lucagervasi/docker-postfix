@@ -2,7 +2,7 @@ FROM alpine:3.7
 
 RUN echo @edge http://dl-cdn.alpinelinux.org/alpine/edge/main >> /etc/apk/repositories
 
-RUN apk --update --nocache upgrade
+#RUN apk --update --nocache upgrade
 RUN apk --update --nocache add \
     supervisor \
     postfix \
