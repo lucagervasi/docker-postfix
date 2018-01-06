@@ -12,7 +12,7 @@ RUN apk --update --nocache add \
     postfix-pcre \
     postfix-sqlite
 
-RUN rm -rf /tmp/* /tmp/.* /var/cache/apk/* 
+RUN rm -rf /tmp/* /tmp/.* /var/cache/apk/* || true
 RUN mkdir /etc/supervisor.d/
 
 RUN mkdir -p /run/opendkim && chown opendkim /run/opendkim
