@@ -2,6 +2,7 @@ FROM alpine:3.7
 
 RUN echo @edge http://dl-cdn.alpinelinux.org/alpine/edge/main >> /etc/apk/repositories
 
+RUN apk --update --nocache upgrade
 RUN apk --update --nocache add supervisor postfix opendkim postfix-policyd-spf-perl postgrey postfix-pcre postfix-sqlite
 
 RUN mkdir /etc/supervisor.d/
@@ -21,4 +22,4 @@ VOLUME /run/opendkim
 EXPOSE 25
 EXPOSE 587
 
-CMD ["/usr/bin/supervisord"]
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
