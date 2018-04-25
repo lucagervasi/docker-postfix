@@ -7,6 +7,7 @@ RUN apk --update --no-cache add \
     supervisor \
     postfix \
     opendkim \
+    opendkim-utils \
     postfix-policyd-spf-perl \
     postgrey \
     postfix-pcre \
